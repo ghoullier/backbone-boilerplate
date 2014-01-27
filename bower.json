@@ -1,0 +1,33 @@
+{
+  "name": "backbone-boilerplate",
+  "version": "0.0.0",
+  "authors": [
+    "ghoullier"
+  ],
+  "description": "backbonejs boilerplate",
+  "main": "app/main.js",
+  "keywords": [
+    "backbonejs",
+    "boilerplate",
+    "requirejs",
+    "handlebars"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "vendor/bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "underscore": "~1.5.2",
+    "backbone": "~1.1.0",
+    "jquery": "~2.1.0",
+    "requirejs": "~2.1.10",
+    "requirejs-text": "~2.0.10",
+    "Backbone-Mediator": "*",
+    "handlebars": "~1.3.0"
+  }
+}

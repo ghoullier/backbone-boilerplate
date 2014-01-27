@@ -1,0 +1,24 @@
+{
+  "name": "backbone-boilerplate",
+  "version": "0.0.0",
+  "description": "backbonejs boilerplate",
+  "main": "app/main.js",
+  "scripts": {
+    "postinstall": "bower install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ghoullier/backbone-boilerplate.git"
+  },
+  "keywords": [
+    "backbonejs",
+    "boilerplate",
+    "requirejs",
+    "handlebars"
+  ],
+  "author": "ghoullier",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ghoullier/backbone-boilerplate/issues"
+  }
+}
