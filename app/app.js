@@ -3,13 +3,13 @@ define(function(require, exports, module) {
 
   var Backbone = require('backbone')
     , Mediator = Backbone.Mediator
-    , MainRouter = require('routers/main')
+    , Router = require('routers/default')
     , started = false
 
   function start() {
     if (!started) {
       // Initialize router
-      app.router = new MainRouter()
+      app.router = new Router()
       // Subscribe navigate topic
       Mediator.subscribe('app:navigate', navigate)
       // Start bootstrap history manager

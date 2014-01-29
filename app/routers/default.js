@@ -10,17 +10,15 @@ define(function(require, exports, module) {
   module.exports = Backbone.Router.extend({
     initialize: function() {
       this.$container = $('#view-container').on('click', 'a', this.onClickLink)
+      this.route('help', 'help')
     },
     routes: {
-      '': 'index',
-      'help': 'help'
+      '': 'index'
     },
     index: function() {
-      console.log('router:index')
       this.loadView(HomeView)
     },
     help: function() {
-      console.log('router:help')
       this.loadView(HelpView)
     },
     loadView: function(View) {

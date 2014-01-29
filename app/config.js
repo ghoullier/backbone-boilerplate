@@ -8,12 +8,12 @@ requirejs.config({
     }
   },
   paths: {
-    'underscore': '../vendor/vendor/underscore/underscore',
-    'jquery': '../vendor/vendor/jquery/jquery',
-    'backbone': '../vendor/vendor/backbone/backbone',
-    'backbone-mediator': '../vendor/vendor/Backbone-Mediator/backbone-mediator',
-    'handlebars': '../vendor/vendor/handlebars/handlebars',
-    'text': '../vendor/vendor/requirejs-text/text'
+    'underscore': '../vendor/bower/underscore/underscore',
+    'jquery': '../vendor/bower/jquery/jquery',
+    'backbone': '../vendor/bower/backbone/backbone',
+    'backbone-mediator': '../vendor/bower/Backbone-Mediator/backbone-mediator',
+    'handlebars': '../vendor/bower/handlebars/handlebars',
+    'text': '../vendor/bower/requirejs-text/text'
   },
   shim: {
     'handlebars': {
