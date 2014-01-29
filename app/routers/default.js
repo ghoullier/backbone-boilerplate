@@ -10,7 +10,7 @@ define(function(require, exports, module) {
   module.exports = Backbone.Router.extend({
     initialize: function() {
       this.$container = $('#view-container').on('click', 'a', this.onClickLink)
-      this.route('help', 'help')
+      this.route('help/:id', 'help')
     },
     routes: {
       '': 'index'
@@ -18,14 +18,16 @@ define(function(require, exports, module) {
     index: function() {
       this.loadView(HomeView)
     },
-    help: function() {
-      this.loadView(HelpView)
+    help: function(id) {
+      this.loadView(HelpView, {
+        modelId: id
+      })
     },
-    loadView: function(View) {
+    loadView: function(View, args) {
       if (this._view) {
         this._view.remove()
       }
-      this._view = new View()
+      this._view = new View(args)
       this.$container.append(this._view.el)
     },
     onClickLink: function(event) {
