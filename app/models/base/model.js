@@ -1,7 +1,7 @@
 define(function(require, exports, module) {
-  'use strict';
+  'use strict'
 
-  var Backbone = require('backbone');
+  var Backbone = require('backbone')
 
   module.exports = Backbone.Model.extend({
 
