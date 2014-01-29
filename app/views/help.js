@@ -13,10 +13,7 @@ define(function(require, exports, module) {
       })
       // Call super
       this.constructor.__super__.initialize.apply(this, arguments)
-      // Load model from Web Service
-      this.model.fetch()
     },
-    template: template,
-    model: new Model()
+    template: template
   })
 })

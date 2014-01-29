@@ -4,6 +4,11 @@ define(function(require, exports, module) {
   var Backbone = require('backbone')
 
   module.exports = Backbone.Model.extend({
-
+    autoFetch: false,
+    initialize: function() {
+      if (this.autoFetch) {
+        this.fetch()
+      }
+    }
   })
 })
