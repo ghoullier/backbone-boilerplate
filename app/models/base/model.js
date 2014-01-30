@@ -1,9 +1,9 @@
-define(function(require, exports, module) {
+define([
+  'backbone'
+], function(Backbone) {
   'use strict';
 
-  var Backbone = require('backbone')
-
-  module.exports = Backbone.Model.extend({
+  return Backbone.Model.extend({
     autoFetch: false,
     initialize: function() {
       if (this.autoFetch) {

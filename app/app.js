@@ -1,10 +1,12 @@
-define(function(require, exports, module) {
+define([
+  'backbone',
+  'routers/default'
+], function(Backbone, Router) {
   'use strict';
 
-  var Backbone = require('backbone')
-    , Mediator = Backbone.Mediator
-    , Router = require('routers/default')
+  var Mediator = Backbone.Mediator
     , started = false
+    , app = {}
 
   function start() {
     if (!started) {
@@ -18,6 +20,7 @@ define(function(require, exports, module) {
       })
     }
   }
+  app.start = start
 
   function navigate(route) {
     app.router.navigate(route, {
@@ -25,8 +28,5 @@ define(function(require, exports, module) {
     })
   }
 
-  var app = module.exports = {
-    start: start
-  }
-
+  return app
 })

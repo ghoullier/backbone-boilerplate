@@ -1,9 +1,9 @@
-define(function(require, exports, module) {
+define([
+  'models/base/model'
+], function(Model) {
   'use strict';
 
-  var Model = require('./base/model')
-
-  module.exports = Model.extend({
+  return Model.extend({
     defaults: {
       title: 'Default Title',
       body: 'Default Body'

@@ -1,11 +1,11 @@
-define(function(require, exports, module) {
+define([
+  'models/home',
+  'views/base/view',
+  'text!views/templates/home.hbs'
+], function(Model, View, template) {
   'use strict';
 
-  var View = require('./base/view')
-    , template = require('text!./templates/home.hbs')
-    , Model =  require('models/home')
-
-  module.exports = View.extend({
+  return View.extend({
     template: template,
     events: {
       'click .body': 'onClickBody'
