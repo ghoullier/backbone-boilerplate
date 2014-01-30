@@ -1,9 +1,10 @@
 define([
-  'chaplin'
-], function(Chaplin) {
+  'chaplin',
+  'models/base/model'
+], function(Chaplin, Model) {
   'use strict';
 
-  var Model = Chaplin.Model.extend({
+  var Collection = Chaplin.Collection.extend({
     // Mixin a synchronization state machine.
     // initialize: function() {
     //   _.extend(this, Chaplin.SyncMachine);
@@ -12,9 +13,9 @@ define([
     //   this.on('sync', this.finishSync);
     //   this.on('error', this.unsync);
     // }
-
-    // Place your application-specific model features here
+    model: Model
+    // Place your application-specific collection features here
   })
 
-  return Model
+  return Collection
 })
