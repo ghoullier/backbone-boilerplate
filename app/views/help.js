@@ -1,11 +1,11 @@
-define(function(require, exports, module) {
+define([
+  'models/help',
+  'views/base/view',
+  'text!views/templates/help.hbs'
+], function(Model, View, template) {
   'use strict';
 
-  var View = require('./base/view')
-    , template = require('text!./templates/help.hbs')
-    , Model =  require('models/help')
-
-  module.exports = View.extend({
+  return View.extend({
     initialize: function(args) {
       // Create new model instance
       this.model = new Model({

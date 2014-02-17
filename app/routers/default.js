@@ -1,13 +1,14 @@
-define(function(require, exports, module) {
+define([
+  'jquery',
+  'backbone',
+  'views/home',
+  'views/help'
+], function($, Backbone, HomeView, HelpView) {
   'use strict';
 
-  var $ = require('jquery')
-    , Backbone = require('backbone')
-    , Mediator = Backbone.Mediator
-    , HomeView = require('views/home')
-    , HelpView = require('views/help')
+  var Mediator = Backbone.Mediator
 
-  module.exports = Backbone.Router.extend({
+  return Backbone.Router.extend({
     initialize: function() {
       this.$container = $('#view-container').on('click', 'a', this.onClickLink)
       this.route('help/:id', 'help')

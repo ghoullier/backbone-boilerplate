@@ -1,12 +1,12 @@
-define(function(require, exports, module) {
+define([
+  'underscore',
+  'jquery',
+  'handlebars',
+  'backbone'
+], function(_, $, Handlebars, Backbone) {
   'use strict';
 
-  var _ = require('underscore')
-    , $ = require('jquery')
-    , Handlebars = require('handlebars')
-    , Backbone = require('backbone')
-
-  module.exports = Backbone.View.extend({
+  return Backbone.View.extend({
     tagName: 'section',
     className: 'view',
     initialize: function() {
