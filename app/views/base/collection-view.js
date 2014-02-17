@@ -4,11 +4,12 @@ define([
 ], function(_, BaseView) {
   'use strict';
 
-  module.exports = BaseView.extend({
+  return BaseView.extend({
     className: 'collection-view',
     container: 'ol',
     ItemView: null,
     initialize: function() {
+      console.log('collection-view')
       this.listenTo(this.collection, 'change reset add remove', this.render)
       // Call BaseView.initialize()
       BaseView.prototype.initialize.apply(this, arguments)

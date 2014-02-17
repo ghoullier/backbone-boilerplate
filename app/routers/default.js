@@ -3,8 +3,9 @@ define([
   'backbone',
   'utils/mediator',
   'views/home',
-  'views/help'
-], function($, Backbone, Mediator, HomeView, HelpView) {
+  'views/help',
+  'views/authors'
+], function($, Backbone, Mediator, HomeView, HelpView, AuthorsView) {
   'use strict';
 
   return Backbone.Router.extend({
@@ -14,7 +15,8 @@ define([
       this.route('help/:id', 'help')
     },
     routes: {
-      '': 'index'
+      '': 'index',
+      'authors': 'authors'
     },
     index: function() {
       this.loadView(HomeView)
@@ -23,6 +25,9 @@ define([
       this.loadView(HelpView, {
         modelId: id
       })
+    },
+    authors: function() {
+      this.loadView(AuthorsView)
     },
     loadView: function(View, args) {
       if (this._view) {

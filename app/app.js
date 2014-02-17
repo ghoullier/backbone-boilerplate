@@ -1,6 +1,6 @@
 define([
   'backbone',
-  'utils/mediator'
+  'utils/mediator',
   'routers/default'
 ], function(Backbone, Mediator, Router) {
   'use strict';
