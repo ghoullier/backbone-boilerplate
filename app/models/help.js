@@ -1,9 +1,9 @@
 define([
   'models/base/model'
-], function(Model) {
+], function(BaseModel) {
   'use strict';
 
-  return Model.extend({
+  return BaseModel.extend({
     autoFetch: true,
     urlRoot: '/api/help',
     defaults: {

@@ -1,8 +1,8 @@
-define(function(require, exports, module) {
+define([
+  'underscore',
+  'views/base/view'
+], function(_, BaseView) {
   'use strict';
-
-  var _ = require('underscore')
-    , BaseView = require('views/base/view')
 
   module.exports = BaseView.extend({
     className: 'collection-view',
@@ -25,10 +25,10 @@ define(function(require, exports, module) {
     },
     renderCollection: function() {
       var view = this
-        , collection = this.getCollectionData()
+        , data = this.getCollectionData()
         , ItemView = this.ItemView
       view.$container.empty()
-      _.each(collection, function(model) {
+      _.each(data, function(model) {
         var item = new ItemView({
           model: model
         })

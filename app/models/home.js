@@ -1,9 +1,9 @@
 define([
   'models/base/model'
-], function(Model) {
+], function(BaseModel) {
   'use strict';
 
-  return Model.extend({
+  return BaseModel.extend({
     defaults: {
       title: 'Default Title',
       body: 'Default Body'

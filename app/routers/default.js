@@ -1,12 +1,11 @@
 define([
   'jquery',
   'backbone',
+  'utils/mediator',
   'views/home',
   'views/help'
-], function($, Backbone, HomeView, HelpView) {
+], function($, Backbone, Mediator, HomeView, HelpView) {
   'use strict';
-
-  var Mediator = Backbone.Mediator
 
   return Backbone.Router.extend({
     initialize: function() {

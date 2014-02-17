@@ -2,13 +2,13 @@ define([
   'models/help',
   'views/base/view',
   'text!views/templates/help.hbs'
-], function(Model, View, template) {
+], function(HelpModel, BaseView, template) {
   'use strict';
 
-  return View.extend({
+  return BaseView.extend({
     initialize: function(args) {
       // Create new model instance
-      this.model = new Model({
+      this.model = new HelpModel({
         id: args.modelId
       })
       // Call super

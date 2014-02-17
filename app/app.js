@@ -1,11 +1,11 @@
 define([
   'backbone',
+  'utils/mediator'
   'routers/default'
-], function(Backbone, Router) {
+], function(Backbone, Mediator, Router) {
   'use strict';
 
-  var Mediator = Backbone.Mediator
-    , started = false
+  var started = false
     , app = {}
 
   function start() {
