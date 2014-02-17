@@ -1,7 +1,7 @@
-define(function(require, exports, module) {
+define([
+  'backbone'
+], function(Backbone) {
   'use strict';
 
-  var Backbone = require('backbone')
-
   module.exports = Backbone.Collection
-});
+})

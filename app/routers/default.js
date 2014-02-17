@@ -10,6 +10,7 @@ define([
   return Backbone.Router.extend({
     initialize: function() {
       this.$container = $('#view-container').on('click', 'a', this.onClickLink)
+      // Dynamic route register
       this.route('help/:id', 'help')
     },
     routes: {
