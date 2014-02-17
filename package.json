@@ -1,9 +1,9 @@
 {
   "name": "backbone-boilerplate",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
   "description": "backbonejs boilerplate",
-  "main": "app/main.js",
+  "main": "app/bootstrap.js",
   "scripts": {
     "postinstall": "bower install"
   },
@@ -17,7 +17,9 @@
     "requirejs",
     "handlebars"
   ],
-  "author": "ghoullier",
+  "author": {
+    "name" : "Grégory Houllier"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ghoullier/backbone-boilerplate/issues"
