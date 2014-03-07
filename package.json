@@ -2,7 +2,7 @@
   "name": "backbone-boilerplate",
   "version": "0.0.0",
   "description": "backbonejs boilerplate",
-  "main": "app/main.js",
+  "private": true,
   "scripts": {
     "postinstall": "bower install"
   },
