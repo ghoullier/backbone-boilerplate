@@ -2,7 +2,8 @@ define([
   'underscore',
   'jquery',
   'handlebars',
-  'backbone'
+  'backbone',
+  'utils/view-helper'
 ], function(_, $, Handlebars, Backbone) {
   'use strict';
 
